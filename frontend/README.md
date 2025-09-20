@@ -1,0 +1,225 @@
+<<<<<<< HEAD
+# Frontend
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
+
+## Development server
+
+To start a local development server, run:
+
+```bash
+ng serve
+```
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# 🍗 PROYECTO-C-Angular-  
+> Sistema Web para Pollería & Parrillas  
+> Frontend en **Angular** + Backend en **Express (Node.js)** + Base de Datos en **SQL Server**
+
+---
+
+## 📌 Descripción del Proyecto
+Este proyecto consiste en el desarrollo de un **sistema web para una pollería**, que busca digitalizar su servicio de atención al cliente, ofreciendo una experiencia ágil y atractiva para los usuarios.  
+
+El sistema permitirá:
+- Visualizar **promociones**.  
+- Explorar categorías de productos (**Brasas, Piqueos, Parrillas**).  
+- Realizar pedidos en línea.  
+- Gestionar cuentas de usuario de manera sencilla.  
+- Procesar pagos con distintos métodos digitales.  
+
+> 💡 La idea es que el cliente final pueda acceder tanto a través de un navegador en PC como en dispositivos móviles.  
+
+---
+
+## 🎯 Objetivos
+- Facilitar pedidos online a través de una interfaz simple e intuitiva.  
+- Presentar promociones destacadas en la página principal.  
+- Organizar los productos en categorías claras: **Promociones, Brasas, Piqueos y Parrillas**.  
+- Ofrecer opciones de autenticación con correo y redes sociales (**Google, Facebook**).  
+- Gestionar pagos en línea con métodos como **VISA, Mastercard y Yape**.  
+- Fortalecer la identidad digital de la pollería mediante un diseño atractivo y uniforme.  
+
+---
+
+## 📂 Alcance Funcional
+
+### 🏠 Página de Inicio
+- Visualización de promociones destacadas.  
+- Búsqueda de productos (“¿Cuál es tu antojo?”).  
+- Navegación por categorías.  
+
+### 👤 Gestión de Usuarios
+- Registro e inicio de sesión con email y contraseña.  
+- Autenticación con Google y Facebook.  
+- Acceso a la sección **“Mi Cuenta”**.  
+
+### 🛒 Carrito de Compras
+- Agregar, modificar y eliminar productos.  
+- Resumen de compra antes del pago.  
+
+### 💳 Pagos en Línea
+- Métodos soportados: VISA, Mastercard y Yape.  
+- Confirmación de compra y comprobante digital.  
+
+### 📑 Información Corporativa
+- Políticas, términos y condiciones.  
+- Libro de reclamaciones digital.  
+- Enlaces a redes sociales: Instagram, TikTok, Facebook.  
+
+---
+
+## 🖥️ Público Objetivo
+- Clientes frecuentes que buscan rapidez en su pedido.  
+- Usuarios digitales que prefieren comprar en línea desde casa.  
+- Personas interesadas en promociones o combos especiales.  
+
+---
+
+## 🛠️ Requisitos Técnicos
+
+### 🔹 Frontend
+- Framework: **Angular**  
+- Organización de carpetas:  
+
+```bash
+frontend/
+ ├── src/
+ │   ├── app/
+ │   │   ├── components/   # Componentes (Navbar, Footer, Promociones, etc.)
+ │   │   ├── pages/        # Vistas (Home, Carrito, Login, Registro)
+ │   │   ├── services/     # Conexión con API (productos, usuarios, pedidos)
+ │   │   ├── models/       # Interfaces (Usuario, Producto, Pedido)
+ │   │   └── app.module.ts
+ │   └── assets/           # Imágenes y estilos globales
+ └── angular.json
+```
+### Backend
+- Servidor: Express **(Node.js)** 
+- Organización de carpetas:
+```bash
+backend/
+ ├── src/
+ │   ├── controllers/     # Lógica de negocio (Usuarios, Productos, Pedidos)
+ │   ├── models/          # Definición de tablas (ORM o SQL manual)
+ │   ├── routes/          # Endpoints REST
+ │   ├── middlewares/     # Autenticación, validaciones
+ │   ├── config/          # Config BD, variables entorno
+ │   └── app.js           # Punto de arranque
+ └── package.json
+```
+
+#### 📋 Requisitos Funcionales
+
+Los siguientes puntos definen lo que el sistema debe cumplir para ser considerado completo. Se dividen en módulos clave para la operación de la pollería en línea.
+
+---
+
+### 👤 Gestión de Usuarios
+- **Registro e inicio de sesión (email/contraseña):** El sistema permitirá a los clientes crear una cuenta y acceder con sus credenciales de manera segura.  
+- **Autenticación con Google y Facebook:** Se integrarán opciones de login social para agilizar el acceso y reducir fricción en el registro.  
+- **Modificación de perfil:** Cada usuario podrá actualizar su información personal (nombre, correo, contraseña, etc.).  
+
+---
+
+### 🛍️ Productos
+- **Visualizar productos por categorías:** Los productos estarán organizados en secciones como *Promociones, Brasas, Piqueos y Parrillas*.  
+- **Filtrar/buscar productos:** Se habilitará un buscador para que el cliente pueda encontrar un producto específico rápidamente.  
+- **Detalles de cada producto:** Cada ítem contará con información detallada: nombre, precio, descripción y fotografía.  
+
+---
+
+### 🛒 Carrito
+- **Agregar, modificar y eliminar productos:** Los usuarios podrán gestionar su carrito antes de confirmar la compra.  
+- **Calcular total de la compra:** El sistema mostrará el costo total en tiempo real, considerando cantidad y precio unitario.  
+
+---
+
+### 💳 Pagos
+- **Integración con VISA, Mastercard y Yape:** El sistema permitirá procesar pagos electrónicos con tarjetas y billeteras digitales.  
+- **Confirmación y comprobante digital:** Una vez realizado el pago, el cliente recibirá la confirmación y un comprobante de compra.  
+
+---
+
+### 📑 Información Legal
+- **Políticas y términos:** Se publicarán términos de uso y políticas de privacidad para garantizar transparencia.  
+- **Libro de reclamaciones digital:** Cumpliendo normativa local, se dispondrá de un módulo digital para reclamos.  
+- **Redirección a redes sociales:** El sistema incluirá enlaces a los perfiles oficiales en Instagram, TikTok y Facebook.  
+
+---
+
+#### 📊 Beneficios Esperados
+- **Incremento de ventas online:** Gracias a la facilidad de compra y accesibilidad del sistema.  
+- **Mayor alcance en clientes digitales:** Se busca atraer a usuarios que prefieren canales digitales sobre la atención presencial.  
+- **Reducción de tiempos de espera:** Los clientes podrán ordenar y pagar antes de llegar al local, optimizando el servicio.  
+- **Registro digital de clientes:** Se generará una base de datos de clientes que podrá usarse para futuras campañas de marketing.  
+
+---
+
+#### 📅 Estado del Proyecto
+Actualmente el proyecto se encuentra en **fase de diseño UI/UX**, con los prototipos desarrollados en **Figma**.  
+
+**Próximos pasos:**  
+1. Definir requisitos funcionales (✅ Completado).  
+2. Diseñar la base de datos en **SQL Server**.  
+3. Implementar la **API con Express (Node.js)**.  
+4. Integrar el **frontend en Angular** con el backend.  
+
+---
+
+🎨 Diseño UI/UX en Figma  
+
+Actualmente se cuenta con las primeras pantallas desarrolladas: **Home** y **Login**.  
+Puedes visualizar el prototipo en el siguiente enlace:  
+
+👉 [Ver diseño en Figma](https://www.figma.com/design/zPLA2Pq4ViwjxVvbEzEa0c/POLLERIA-GRILL?node-id=0-1&p=f&t=2pvqzLp7OfZGBRHT-0)  
+
+
+>>>>>>> 13c5cbd7c7bae76c78ac9315d06be1e6dbda6a7b
