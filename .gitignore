@@ -1,0 +1,13 @@
+# Ignora las carpetas de dependencias de ambos proyectos
+backend/node_modules/
+frontend/node_modules/
+
+# Ignora los archivos de entorno
+backend/.env
+frontend/.env
+# Opcional: logs
+*.log
+
+# Opcional: builds
+dist/
+build/
