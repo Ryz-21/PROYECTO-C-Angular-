@@ -1,26 +1,18 @@
 {
   "compilerOptions": {
-    /* Módulos y Entorno */
-    "module": "nodenext",                 // Sigue el sistema de resolución de módulos de Node.js
-    "target": "esnext",                   // Compila el código a la versión más reciente
-    "lib": ["esnext"],                    // Incluye las definiciones de tipos para las características de ESNext
-    "types": ["node"],                    // Habilita los tipos globales de Node.js (necesario para Express)
-    "moduleDetection": "force",           // Asegura que todos los archivos sean tratados como módulos
+    "esModuleInterop": true,
+    "module": "nodenext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "types": ["node"],
+    "moduleDetection": "force",
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true
 
-    /* Integración con TypeScript */
-    "allowImportingTsExtensions": true,   // Permite importar archivos .ts
-    "verbatimModuleSyntax": false,         // Garantiza que la sintaxis de importación/exportación se mantenga
-
-    /* Opciones de Tipado Estricto */
-    "strict": true,                       // Habilita todas las opciones de tipado estricto
-    "noUncheckedIndexedAccess": true,     // Asegura que los accesos a arrays o índices sean revisados
-    "exactOptionalPropertyTypes": true,   // Requiere que las propiedades opcionales se definan explícitamente como `undefined` si no están presentes
-
-    /* Otras Opciones */
-    "sourceMap": true,                    // Genera archivos .map para la depuración
-    "skipLibCheck": true,                 // Ignora los errores de tipo en los archivos de la biblioteca
-    "isolatedModules": true,              // Garantiza que cada archivo pueda ser compilado de forma aislada
-
-    "noEmit": true 
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   }
 }
