@@ -169,4 +169,5 @@ Integrar el frontend en Angular con el backend.
 Actualmente se cuenta con las primeras pantallas desarrolladas: Home y Login.
 Puedes visualizar el prototipo en el siguiente enlace:
 
-👉 Ver diseño en Figma
+👉 [Ver diseño en Figma](https://www.figma.com/design/zPLA2Pq4ViwjxVvbEzEa0c/POLLERIA-GRILL?node-id=0-1&p=f&t=2pvqzLp7OfZGBRHT-0)  
+
