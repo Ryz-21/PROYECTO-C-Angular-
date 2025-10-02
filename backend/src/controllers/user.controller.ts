@@ -15,7 +15,13 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
 // Obtener un usuario por ID
 export const getUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const id = parseInt(req.params.id, 10);
+    const idParam = req.params.id;
+    if (!idParam) {
+      res.status(400).json({ message: "ID no proporcionado" });
+      return;
+    }
+
+    const id = parseInt(idParam, 10);
     if (isNaN(id)) {
       res.status(400).json({ message: "ID inválido" });
       return;
@@ -27,7 +33,7 @@ export const getUser = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    res.status(200).json(user[0]); // devolvemos el primer resultado
+    res.status(200).json(user[0]);
   } catch (error: any) {
     res.status(500).json({ message: error.message });
   }
@@ -37,7 +43,10 @@ export const getUser = async (req: Request, res: Response): Promise<void> => {
 export const createUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const newUser: User = req.body;
-    await UserModel.agregarUsuario(newUser);
+    await UserModel.agregarUsuario({
+      ...newUser,
+      ProveedorLogin: newUser.ProveedorLogin ?? "LOCAL"
+    });
     res.status(201).json({ message: "Usuario creado con éxito" });
   } catch (error: any) {
     res.status(500).json({ message: error.message });
@@ -47,7 +56,13 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
 // Actualizar usuario
 export const updateUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const id = parseInt(req.params.id, 10);
+    const idParam = req.params.id;
+    if (!idParam) {
+      res.status(400).json({ message: "ID no proporcionado" });
+      return;
+    }
+
+    const id = parseInt(idParam, 10);
     if (isNaN(id)) {
       res.status(400).json({ message: "ID inválido" });
       return;
@@ -64,7 +79,13 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
 // Desactivar usuario
 export const deleteUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const id = parseInt(req.params.id, 10);
+    const idParam = req.params.id;
+    if (!idParam) {
+      res.status(400).json({ message: "ID no proporcionado" });
+      return;
+    }
+
+    const id = parseInt(idParam, 10);
     if (isNaN(id)) {
       res.status(400).json({ message: "ID inválido" });
       return;

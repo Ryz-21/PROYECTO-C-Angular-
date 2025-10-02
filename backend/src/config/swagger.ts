@@ -1,55 +1,56 @@
 // src/config/swagger.ts
 import swaggerJSDoc from "swagger-jsdoc";
 
+//definicion de las opciones para swagger
 const options = {
   definition: {
-    openapi: "3.0.0",
-    info: {
-      title: "APIS",
-      version: "1.0.0",
-      description: "Documentación de las APIs",
+    openapi: "3.0.0", // Version de OpenAPI
+    info: { // Información básica sobre la API
+      title: "APIS", // Título de la API
+      version: "1.0.0", // Versión de la API
+      description: "Documentación de las APIs", // Descripción de la API
     },
     servers: [{ url: "http://localhost:3000" }],
     components: {
       schemas: {
-        Category: {
+        Category: { // Definición del esquema Category
           type: "object",
           properties: {
-            IdCategoria: { type: "integer", example: 1 },
-            Nombre: { type: "string", example: "Pollo entero" },
-            Descripcion: { type: "string", example: "Categoría de productos" },
-            Estado: { type: "integer", example: 1, description: "1=activo, 0=inactivo" }
+            IdCategoria: { type: "integer", example: 1 }, // Ejemplo de IdCategoria
+            Nombre: { type: "string", example: "Pollo entero" }, // Ejemplo de Nombre
+            Descripcion: { type: "string", example: "Categoría de productos" },// Ejemplo de Descripcion
+            Estado: { type: "integer", example: 1, description: "1=activo, 0=inactivo" }// Ejemplo de Estado
           },
-          required: ["Nombre"]
+          required: ["Nombre"]// Nombre es obligatorio
         },
         User: {
           type: "object",
           properties: {
-            IdUsuario: { type: "integer", example: 1 },
-            Nombre: { type: "string", example: "Juan" },
-            Apellido: { type: "string", example: "Pérez" },
-            Email: { type: "string", example: "juanperez@mail.com" },
-            Estado: { type: "integer", example: 1, description: "1=activo, 0=inactivo" }
+            IdUsuario: { type: "integer", example: 1 },// Ejemplo de IdUsuario
+            Nombre: { type: "string", example: "Juan" },// Ejemplo de Nombre
+            Apellido: { type: "string", example: "Pérez" },// Ejemplo de Apellido
+            Email: { type: "string", example: "juanperez@mail.com" },// Ejemplo de Email
+            Estado: { type: "integer", example: 1, description: "1=activo, 0=inactivo" }// Ejemplo de Estado
           },
-          required: ["Nombre", "Apellido", "Email"]
+          required: ["Nombre", "Apellido", "Email"]// Nombre, Apellido y Email son obligatorios
         },
-        NewUser: {
+        NewUser: {// Definición del esquema NewUser
           type: "object",
           properties: {
-            Nombre: { type: "string", example: "Juan" },
-            Apellido: { type: "string", example: "Pérez" },
-            Email: { type: "string", example: "juanperez@mail.com" },
-            Clave: { type: "string", example: "123456" }
+            Nombre: { type: "string", example: "Juan" },// Ejemplo de Nombre
+            Apellido: { type: "string", example: "Pérez" },// Ejemplo de Apellido
+            Email: { type: "string", example: "juanperez@mail.com" },// Ejemplo de Email
+            Clave: { type: "string", example: "123456" }// Ejemplo de Clave
           },
-          required: ["Nombre", "Apellido", "Email", "Clave"]
+          required: ["Nombre", "Apellido", "Email", "Clave"]// Todos son obligatorios
         },
-        UpdateUser: {
-          type: "object",
-          properties: {
-            Nombre: { type: "string", example: "Juan actualizado" },
-            Apellido: { type: "string", example: "Pérez" },
-            Email: { type: "string", example: "juanperez_updated@mail.com" },
-            Estado: { type: "integer", example: 1 }
+        UpdateUser: {// Definición del esquema UpdateUser
+          type: "object",// Tipo de dato objeto
+          properties: {// Propiedades del objeto
+            Nombre: { type: "string", example: "Juan actualizado" },// Ejemplo de Nombre
+            Apellido: { type: "string", example: "Pérez" },// Ejemplo de Apellido
+            Email: { type: "string", example: "juanperez_updated@mail.com" },// Ejemplo de Email
+            Estado: { type: "integer", example: 1 }// Ejemplo de Estado
           }
         }
       }

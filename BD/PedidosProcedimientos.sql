@@ -1,13 +1,20 @@
+
+DROP PROCEDURE IF EXISTS sp_AgregarPedido;
+DROP PROCEDURE IF EXISTS sp_ModificarPedido;
+DROP PROCEDURE IF EXISTS sp_EliminarPedido;
+DROP PROCEDURE IF EXISTS sp_BuscarPedidoPorID;
+DROP PROCEDURE IF EXISTS sp_BuscarTodosPedidos;
 -- AGREGAR PEDIDO
 DELIMITER //
 CREATE PROCEDURE sp_AgregarPedido(
     IN p_IdUsuario INT,
     IN p_Total DECIMAL(10,2),
+    IN P_fecha DATE,
     IN p_MetodoPago VARCHAR(50)
 )
 BEGIN
-    INSERT INTO Pedidos(IdUsuario, Total, MetodoPago)
-    VALUES (p_IdUsuario, p_Total, p_MetodoPago);
+    INSERT INTO Pedidos(IdUsuario, Total, MetodoPago, FechaPedido) 
+    VALUES (p_IdUsuario, p_Total, p_MetodoPago , P_fecha);
 END //
 DELIMITER ;
 

@@ -6,6 +6,7 @@ CREATE TABLE Categorias (
     Nombre VARCHAR(100) NOT NULL, -- Ej: Promociones, Brasas, Piqueos, Parrillas
     Descripcion VARCHAR(255)
 );
+--- ALTER TABLE Categorias ADD Estado TINYINT(1) DEFAULT 1;
 
 -- =============================
 -- TABLA USUARIOS

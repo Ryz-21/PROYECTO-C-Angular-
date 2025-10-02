@@ -48,3 +48,23 @@ BEGIN
     SELECT * FROM Categorias;
 END //
 DELIMITER ;
+
+--- ALTER TABLE Categorias ADD Estado TINYINT(1) DEFAULT 1;
+
+--desactivar categoria 
+DELIMITER //
+CREATE PROCEDURE sp_DesactivarCategoria(IN p_IdCategoria INT)
+BEGIN
+    UPDATE Categorias
+    SET Estado = 0
+    WHERE IdCategoria = p_IdCategoria;
+END //
+DELIMITER ;
+--DELIMITER //
+
+--listar solo activas xd 
+CREATE PROCEDURE sp_BuscarCategoriasActivas()
+BEGIN
+    SELECT * FROM Categorias WHERE Estado = 1;
+END //
+DELIMITER ;

@@ -1,5 +1,5 @@
 // src/models/user.model.ts
-import pool from "../config/db";
+import pool from "../config/db.ts";
 
 // Definimos la interfaz de Usuario
 export interface User {
